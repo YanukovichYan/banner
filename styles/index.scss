@@ -1,0 +1,208 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: SFProText-Regular;
+  src: url("/fonts/SFProText-Regular.ttf");
+}
+
+@font-face {
+  font-family: SFProDisplay-Regular;
+  src: url("/fonts/SFProDisplay-Regular.ttf");
+}
+
+@font-face {
+  font-family: SFProDisplay-Bold;
+  src: url("/fonts/SFProDisplay-Bold.ttf");
+}
+
+body {
+  font-family: SFProText-Regular, sans-serif
+}
+
+.banner {
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/images/bg.png");
+  color: #fff;
+
+  .wrapper {
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    right: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      .close {
+        width: 24px;
+        height: 24px;
+        color: rgba(255, 255, 255, 0.4);
+      }
+
+      .restore {
+        letter-spacing: -0.216667px;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 13px;
+        text-decoration: none;
+      }
+    }
+
+    .main-title {
+      padding: 0 25px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      font-family: 'SFProDisplay-Bold', sans-serif;
+      font-size: 36px;
+      line-height: 42px;
+      text-align: center;
+      margin-top: 153px;
+      margin-bottom: 29px;
+    }
+
+    .advantages {
+      list-style: none;
+      width: 100%;
+      min-width: 209px;
+      max-width: fit-content;
+      margin: 0 auto;
+
+      li {
+        display: flex;
+
+        .icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 26px;
+          margin-right: 9px;
+        }
+
+        .text {
+          text-shadow: 0 0 4px rgba(0, 0, 0, 0.684495);
+          letter-spacing: -0.321111px;
+          font-size: 17px;
+          white-space: nowrap;
+        }
+      }
+
+      li + li {
+        margin-top: 12px;
+      }
+    }
+
+    .cards-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 15px;
+      margin-top: 45px;
+
+      .card {
+        width: 145px;
+        height: 178px;
+        background: rgba(73, 87, 149, 0.197154);
+        border: 1px solid #495795;
+        border-radius: 20.9px;
+        text-align: center;
+        padding: 25px 0 14px 0;
+        box-sizing: border-box;
+        font-family: SFProDisplay-Bold, sans-serif;
+        position: relative;
+
+        &.opacity {
+          opacity: 0.49;
+          transform: scale(.9);
+        }
+
+        .card-title {
+          font-size: 18.7px;
+          line-height: 22px;
+          margin-bottom: 14px;
+        }
+
+        .free-days {
+          position: absolute;
+          width: calc(100% + 6px);
+          height: 22px;
+          background-color: #495795;
+          left: -3px;
+          right: -3px;
+          bottom: 41px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .bottom-price {
+          position: absolute;
+          right: 0;
+          bottom: 14px;
+          left: 0;
+          font-family: SFProDisplay-Regular, sans-serif;
+          font-size: 13.2px;
+          line-height: 15px;
+        }
+      }
+    }
+
+    .btn {
+      width: 280px;
+      height: 54px;
+      background: linear-gradient(270deg, #1987FF 0%, #19CCFF 100%);
+      border-radius: 30px;
+      border: 0;
+      color: #FFFFFF;
+      font-size: 17px;
+      line-height: 17px;
+      font-family: SFProDisplay-Bold, sans-serif;
+      margin: 16px 0;
+    }
+
+    .bottom-text {
+      opacity: 0.5;
+      mix-blend-mode: normal;
+      font-size: 11px;
+      line-height: 13px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      .link {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13px;
+        text-decoration-line: underline;
+        color: #BDC0D0;
+      }
+    }
+
+    .home-indicator {
+      position: absolute;
+      width: 134px;
+      height: 5px;
+      background: #FFFFFF;
+      border-radius: 100px;
+      bottom: 8px;
+    }
+  }
+}
