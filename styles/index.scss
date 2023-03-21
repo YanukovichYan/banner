@@ -39,6 +39,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 
     .header {
       display: flex;
@@ -67,7 +68,7 @@ body {
       font-size: 36px;
       line-height: 42px;
       text-align: center;
-      margin-top: 153px;
+      margin-top: auto;
       margin-bottom: 29px;
     }
 
@@ -185,6 +186,7 @@ body {
       align-items: center;
       justify-content: space-between;
       width: 100%;
+      padding-bottom: 25px;
 
       .link {
         font-family: 'Roboto', sans-serif;
@@ -206,3 +208,5 @@ body {
     }
   }
 }
+
+@import "adaptive";
