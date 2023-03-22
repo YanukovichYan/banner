@@ -106,10 +106,9 @@ body {
         opacity: 0.49;
         width: 131px;
         height: 162px;
-        //transition: all .3s ease;
 
         &.first {
-          background: rgba(73, 87, 149, 0.197154);
+          background: rgba(73, 87, 149, 0.2);
           border: 1px solid #495795;
           border-radius: 20.9px;
         }
@@ -133,7 +132,6 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
-            //transition: all .3s ease;
           }
         }
 
