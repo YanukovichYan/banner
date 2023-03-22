@@ -1,6 +1,6 @@
 import '../styles/index.scss'
 import {setTranslations} from "./setTranslations";
-import {dataFeed, languagesEnum, links} from "./dataFeed";
+import {languagesEnum, links} from "./dataFeed";
 
 window.onload = () => {
     let userLang = window.navigator ? window.navigator.language : 'en';
@@ -37,7 +37,7 @@ window.onload = () => {
 
 function selectionCard() {
     const cards = document.querySelectorAll('.card')
-
+    const btnNext = document.getElementById('btn-next')
     let activeCard = 'first'
 
     cards.forEach(card => {
@@ -48,7 +48,7 @@ function selectionCard() {
         })
     })
 
-    dataFeed.btnNext.onclick = () => {
+    btnNext.onclick = () => {
         activeCard === 'first' ? redirectTo(links.apple) : redirectTo(links.google)
     }
 
