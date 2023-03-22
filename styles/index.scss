@@ -1,21 +1,8 @@
+@import "fonts";
+
 * {
   padding: 0;
   margin: 0;
-}
-
-@font-face {
-  font-family: SFProText-Regular;
-  src: url("/fonts/SFProText-Regular.ttf");
-}
-
-@font-face {
-  font-family: SFProDisplay-Regular;
-  src: url("/fonts/SFProDisplay-Regular.ttf");
-}
-
-@font-face {
-  font-family: SFProDisplay-Bold;
-  src: url("/fonts/SFProDisplay-Bold.ttf");
 }
 
 body {
@@ -109,41 +96,79 @@ body {
       justify-content: center;
       column-gap: 15px;
       margin-top: 45px;
+      height: 178px;
 
       .card {
-        width: 145px;
-        height: 178px;
-        background: rgba(73, 87, 149, 0.197154);
-        border: 1px solid #495795;
-        border-radius: 20.9px;
         text-align: center;
-        padding: 25px 0 14px 0;
         box-sizing: border-box;
-        font-family: SFProDisplay-Bold, sans-serif;
         position: relative;
+        padding: 25px 0 14px 0;
+        opacity: 0.49;
+        width: 131px;
+        height: 162px;
+        //transition: all .3s ease;
 
-        &.opacity {
-          opacity: 0.49;
-          transform: scale(.9);
+        &.first {
+          background: rgba(73, 87, 149, 0.197154);
+          border: 1px solid #495795;
+          border-radius: 20.9px;
+        }
+
+        &.second {
+          background-image: url("/images/shape-2.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: relative;
+
+          .discount {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #DB0000;
+            top: 0;
+            right: 0;
+            border-radius: 50%;
+            font-size: 10px;
+            line-height: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            //transition: all .3s ease;
+          }
         }
 
         .card-title {
-          font-size: 18.7px;
-          line-height: 22px;
-          margin-bottom: 14px;
+          font-family: SFProDisplay-Bold, sans-serif;
+          font-size: 17px;
+          line-height: 20px;
+          margin-bottom: 20px;
+        }
+
+        .price {
+          font-family: SFProDisplay-Regular, sans-serif;
+          font-size: 13.2px;
+          line-height: 15px;
+
+          strong {
+            font-family: SFProDisplay-Bold, sans-serif;
+            font-size: 22px;
+          }
         }
 
         .free-days {
+          font-family: SFProDisplay-Heavy, sans-serif;
           position: absolute;
           width: calc(100% + 6px);
-          height: 22px;
+          height: 20px;
           background-color: #495795;
           left: -3px;
           right: -3px;
-          bottom: 41px;
+          bottom: 37px;
           display: flex;
           align-items: center;
           justify-content: center;
+          font-size: 14px;
+          line-height: 16px;
         }
 
         .bottom-price {
@@ -152,8 +177,45 @@ body {
           bottom: 14px;
           left: 0;
           font-family: SFProDisplay-Regular, sans-serif;
-          font-size: 13.2px;
-          line-height: 15px;
+          font-size: 12px;
+          line-height: 14px;
+        }
+
+        &.active {
+          width: 145px;
+          height: 100%;
+          opacity: 1;
+
+          .card-title {
+            font-size: 18.7px;
+            line-height: 22px;
+          }
+
+          .discount {
+            top: -3px;
+            right: -3px;
+            width: 38px;
+            height: 38px;
+            font-size: 12px;
+          }
+
+          .price {
+            strong {
+              font-size: 24px;
+            }
+          }
+
+          .free-days {
+            height: 22px;
+            font-size: 15.4px;
+            line-height: 18px;
+            bottom: 41px;
+          }
+
+          .bottom-price {
+            font-size: 13.2px;
+            line-height: 15.5px;
+          }
         }
       }
     }
@@ -176,7 +238,7 @@ body {
       mix-blend-mode: normal;
       font-size: 11px;
       line-height: 13px;
-      font-family: 'Roboto', sans-serif;
+      font-family: Roboto-Regular, sans-serif;
       font-weight: 400;
       margin-bottom: 16px;
     }
@@ -189,8 +251,7 @@ body {
       padding-bottom: 25px;
 
       .link {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 400;
+        font-family: Roboto-Regular, sans-serif;
         font-size: 11px;
         line-height: 13px;
         text-decoration-line: underline;
